@@ -342,10 +342,6 @@ h2 {
         flex-direction: column;
     }
 }
-/* .col__content-wrap-1 {
-    flex-direction: column;
-} */
-    
 
 .col__content-txt {
     max-width: 22vw;
@@ -360,9 +356,15 @@ h2 {
     }
 }
 .col__content-txt-1 {
-    order: 1;
+    max-width: 22vw;
+    order: 2;
+    margin-left: 32px;
+    font-family: 'Cinzel', serif;  
+    @media all and (max-width: 768px) {
+        order: 1;
         max-width: 40vw;
-        margin: 0 0 2vw 5vw;
+        margin: 0 0 2vw 10vw;
+    }
 }
 
 .slide-link {
@@ -680,9 +682,9 @@ h2 {
                     <div class="col__content col__content--5">
                         <h2 class="col__content-title"><span class="line__inner">能力</span><span class="line__inner">No. 5</span></h2>
                         <div class="col__content-wrap col__content-wrap-1">
-                            <p class="col__content-txt col__content-txt-1">繪圖軟體 :<br>PhotoShop<br>Illustrator<br>Figma</p>
-                            <p class="col__content-txt col__content-txt-1">程式語言 :<br>JavaScript<br>Html<br>Css</p>
-                            <p class="col__content-txt col__content-txt-1">工具 :<br>Vue<br>Node.js<br>Git<br>Socket.io</p>
+                            <p class=" col__content-txt-1">繪圖軟體<br><br>PhotoShop<br>Illustrator<br>Figma</p>
+                            <p class=" col__content-txt-1">程式語言<br><br>JavaScript<br>Html<br>Css</p>
+                            <p class=" col__content-txt-1">工具<br><br>Vue<br>Node.js<br>Git<br>Socket.io</p>
                             <a href="#" class="slide-link">
                                 <div class="slide-link__circ slide-link__circ-1"></div>
                                 <div class="slide-link__line slide-link__line-1"></div>
