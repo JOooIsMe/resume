@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>莊英誠 ＪＯ的履歷</title>
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -62,10 +62,7 @@ h2 {
     font-weight: bold;
 }
 
-/*  ========================================================================== 
-    Nav Header
-    ========================================================================== */
-
+/*  ==========================================================================     Nav Header*/
 .header {
     position: fixed;
     left: 40px;
@@ -106,10 +103,7 @@ h2 {
     
 }
 
-/*  ========================================================================== 
-    Intro
-    ========================================================================== */
-
+/*  ==========================================================================     Intro*/
 .intro,
 .footer {
     height: 100vh;
@@ -202,10 +196,7 @@ h2 {
     }
 }
 
-/*  ========================================================================== 
-    Slides
-    ========================================================================== */
-
+/*  ==========================================================================     Slides*/
 .slide {
     display: flex;
     align-items: stretch;
@@ -222,9 +213,7 @@ h2 {
     }
 }
 
-/*  Columns
-    ========================================================================== */
-
+/*  Columns*/
 .col {
     flex-basis: 50%;
     
@@ -257,10 +246,7 @@ h2 {
     }
 }
 
-/*  ========================================================================== 
-    Column Content
-    ========================================================================== */
-
+/*  ==========================================================================     Column Content*/
 .col__content {
     position: relative;
     display: flex;
@@ -335,9 +321,7 @@ h2 {
     }
 }
 
-/*  Column Content
-    ========================================================================== */
-
+/*  Column Content*/
 .col__content-title {
     margin: 0 0 2vw;
     font-size: 11vw;
@@ -502,10 +486,7 @@ h2 {
     }
 }
 
-/*  ========================================================================== 
-    Column Image
-    ========================================================================== */
-
+/*  ==========================================================================     Column Image*/
 .col__image-wrap {
     position: absolute;
     left: 0;
@@ -521,10 +502,7 @@ h2 {
     height: 100%;
 }
 
-/*  ========================================================================== 
-    Footer
-    ========================================================================== */
-
+/*  ==========================================================================     Footer*/
 .footer {
     display: flex;
     align-items: center;
@@ -800,7 +778,7 @@ h2 {
 
     function initHeader() {
         
-        // animate the logo and fake burger button into place
+        // LOGO動畫
         
         let tl = gsap.timeline({delay: 0.5});
         
@@ -815,7 +793,7 @@ h2 {
 
     function initIntro() {
         
-        // animate the intro elements into place
+        // intro動畫
         
         let tl = gsap.timeline({delay: 1.2});
         
@@ -852,7 +830,7 @@ h2 {
             duration: 10
         }, 1);
         
-        // set up scrollTrigger animation for the when the intro scrolls out
+        // 滾軸動畫
         
         let stl = gsap.timeline({
             scrollTrigger: {
@@ -880,7 +858,7 @@ h2 {
 
     function initLinks() {
         
-        // ScrollToPlugin links
+        // 滑行到頁面
         
         links.forEach((link, index, e) => {     
             
@@ -918,7 +896,7 @@ h2 {
             
         });
         
-        // ScrollToPlugin link back to the top
+        // 滑到最上
         
         let top = select('.footer__link-top');
         
@@ -976,7 +954,7 @@ h2 {
 
     function initSlides() {
         
-        // Animation of each slide scrolling into view
+        // 滑動特效
         
         slides.forEach((slide, i) => {   
             
@@ -1028,7 +1006,7 @@ h2 {
             }, 1.4)
         });
         
-        // External footer link scroll animation
+        // footer
         
         gsap.from('.footer__link', {
             scrollTrigger: {
@@ -1056,7 +1034,7 @@ h2 {
                     scrub: true,
                     start: "top bottom", 
                     snap: {
-                        snapTo: 0.5, // 0.5 'cause the scroll animation range is 200vh for parallax effect
+                        snapTo: 0.5, 
                         duration: 1,
                         ease: 'power4.inOut'
                     }
@@ -1085,7 +1063,7 @@ h2 {
     function initKeys() {
         document.addEventListener('keydown', (e) => {
             e.preventDefault();
-            if(event.keyCode == 40) { //down arrow to next slide
+            if(event.keyCode == 40) { 
                 if(slideID <= slides.length) {
                     slideID++;
                     gsap.to(window, {
@@ -1097,7 +1075,7 @@ h2 {
                     });
                 }
             }
-            else if(event.keyCode == 38) { // up arrow to top
+            else if(event.keyCode == 38) { 
                 slideID = 0;
                 scrollTop();
             }
@@ -1118,33 +1096,33 @@ h2 {
         init();
     };
 
-    //----------------------Vue--------------------------
-    const app = Vue.createApp(
-        {
-            setup() {
-                //----------------------------Data-----------------------------------
-                // 在這裡使用setup函數，處理狀態和邏輯
-                const bodyPart = Vue.ref([])
+    // //----------------------Vue--------------------------
+    // const app = Vue.createApp(
+    //     {
+    //         setup() {
+    //             //----------------------------Data-----------------------------------
+    //             // 在這裡使用setup函數，處理狀態和邏輯
+    //             const bodyPart = Vue.ref([])
 
-                //----------------------------Function-----------------------------------
+    //             //----------------------------Function-----------------------------------
 
 
                 
 
-                //----------------------------onMounted-----------------------------------
-                Vue.onMounted(() => {
+    //             //----------------------------onMounted-----------------------------------
+    //             Vue.onMounted(() => {
 
-                });
-                //-------------------------------return-----------------------------------
+    //             });
+    //             //-------------------------------return-----------------------------------
 
-                return {
-                    bodyPart,
-                };
-            }
-        }
-    );
+    //             return {
+    //                 bodyPart,
+    //             };
+    //         }
+    //     }
+    // );
 
-    app.mount('#app');
+    // app.mount('#app');
 
     </script>
 </body>
