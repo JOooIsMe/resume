@@ -200,7 +200,7 @@ h2 {
 @media (max-width: 768px) {
     .intro__txt {
         max-width: 50vw;
-        margin-left: 10vw;
+        margin-left: 20vw;
     }
 }
 
@@ -309,7 +309,7 @@ h2 {
 
 @media (max-width: 768px) {
     .col__content--3 {
-        background: rgba(63, 63, 63, 0.9);
+        background: rgba(202, 202, 202, 0.9);
     }
 }
 
@@ -319,7 +319,7 @@ h2 {
 
 @media (max-width: 768px) {
     .col__content--4 {
-        background: rgba(248, 233, 230, 0.9);
+        background: rgb(165, 165, 165 , 0.9);
     }
 }
 
@@ -1014,6 +1014,13 @@ h2 {
                 stagger: 0.1
             }, 0)
             .from(slide.querySelectorAll('.col__content-txt'), {
+                x: 100,
+                y: 50,
+                opacity: 0,
+                duration: 2,
+                ease: "power4"
+            }, 0.4)
+            .from(slide.querySelectorAll('.col__content-txt-1'), {
                 x: 100,
                 y: 50,
                 opacity: 0,
